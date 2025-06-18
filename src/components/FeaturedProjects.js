@@ -2,9 +2,9 @@ import { ArrowRight, Github } from "lucide-react";
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="bg-section rounded-2xl border border-border p-6 hover:border-accent-primary transition-colors duration-200">
+    <div className="bg-section rounded-2xl border border-border p-6 hover:border-accent-primary transition-colors duration-200 cursor-pointer group">
       {/* Project Title */}
-      <h3 className="text-xl font-semibold text-white mb-2">
+      <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-accent-primary transition-colors duration-200">
         {project.title}
       </h3>
 
@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
         </button>
 
         {/* Technology Tags */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 flex-row-reverse">
           {project.technologies.map((tech, techIndex) => (
             <span
               key={techIndex}
@@ -55,9 +55,9 @@ export default function FeaturedProjects() {
     <section>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-3xl font-bold text-text-primary">Featured Projects</h2>
+        <h2 className="text-3xl font-bold text-text-primary">Projects</h2>
         <button className="inline-flex items-center gap-2 text-accent-primary hover:text-accent-hover transition-colors duration-200 group">
-          <span className="text-base font-medium">View All Projects</span>
+          <span className="text-base font-medium">View All</span>
           <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
         </button>
       </div>
