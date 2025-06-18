@@ -15,8 +15,7 @@ const navigationItems = [
 const NavLink = ({ href, icon, label }) => (
   <Link 
     href={href} 
-    className="text-base font-bold transition-colors hover:opacity-80"
-    style={{ color: '#eaeaea' }}
+    className="text-base font-bold transition-colors hover:opacity-80 text-text-primary"
     title={label}
   >
     <div className="block sm:hidden">
@@ -31,19 +30,14 @@ const NavLink = ({ href, icon, label }) => (
 const Header = () => {
   return (
     <header 
-      className="w-full px-6 py-4 border-b"
-      style={{ 
-        backgroundColor: '#0f0f10',
-        borderColor: '#2e2e30'
-      }}
+      className="w-full px-6 py-4 border-b bg-background border-border"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0 flex items-center space-x-2 gap-1">
           <Image src="/avatar-thumbnail.png" alt="Logo" width={32} height={32} className="object-contain" />
           <h1 
-            className="text-lg font-medium tracking-wide hidden sm:block"
-            style={{ color: '#a58d6f' }}
+            className="text-lg font-medium tracking-wide hidden sm:block text-accent-secondary"
           >
             Manish Lath
           </h1>

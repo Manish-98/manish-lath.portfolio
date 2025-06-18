@@ -1,62 +1,72 @@
 @import "tailwindcss";
 
 :root {
-  --color-background: #0f0f10;
-  --color-section-bg: #18191c;
-  --color-text-primary: #eaeaea;
-  --color-text-secondary: #a0a0a0;
-  --color-accent-primary: #5e7ba5;
-  --color-accent-hover: #7da1d6;
-  --color-accent-secondary: #a58d6f;
-  --color-dividers: #2e2e30;
+  --background: #0f0f10;
+  --section: #18191c;
+  --text-primary: #eaeaea;
+  --text-secondary: #a0a0a0;
+  --accent-primary: #5e7ba5;
+  --accent-hover: #7da1d6;
+  --accent-secondary: #a58d6f;
+  --border: #2e2e30;
+
+  background-color: var(--background);
   font-family: var(--font-inter);
+  color: var(--text-primary);
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-section: var(--section);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-border: var(--border);
 }
 
 @layer base {
   .bg-background {
-    background-color: var(--color-background);
+    background-color: var(--background);
   }
   
   .bg-section {
-    background-color: var(--color-section-bg);
+    background-color: var(--section);
   }
   
   .text-primary {
-    color: var(--color-text-primary);
+    color: var(--text-primary);
   }
   
   .text-secondary {
-    color: var(--color-text-secondary);
-  }
-  
-  .border-dividers {
-    border-color: var(--color-dividers);
+    color: var(--text-secondary);
   }
 }
 
 @layer components {
   .btn-primary {
     @apply transition-all duration-200;
-    background-color: var(--color-accent-primary);
-    color: var(--color-text-primary);
-    border: 2px solid var(--color-accent-primary);
+    background-color: var(--accent-primary);
+    color: var(--text-primary);
+    border: 2px solid var(--accent-primary);
   }
   
   .btn-primary:hover {
-    background-color: var(--color-accent-hover);
-    border-color: var(--color-accent-hover);
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
   }
   
   .btn-secondary {
     @apply transition-all duration-200;
     background-color: transparent;
-    color: var(--color-text-primary);
-    border: 2px solid var(--color-dividers);
+    color: var(--text-primary);
+    border: 2px solid var(--border);
   }
   
 
   .btn-secondary:hover {
-    background-color: var(--color-section-bg);
-    border-color: var(--color-accent-primary);
+    background-color: var(--section);
+    border-color: var(--accent-primary);
   }
 }

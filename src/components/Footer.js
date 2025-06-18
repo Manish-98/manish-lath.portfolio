@@ -35,11 +35,7 @@ const SocialIcon = ({ href, ariaLabel, children }) => (
 const Footer = () => {
   return (
     <footer 
-      className="w-full px-6 py-6 border-t"
-      style={{ 
-        backgroundColor: '#0f0f10',
-        borderColor: '#2e2e30'
-      }}
+      className="w-full px-6 py-6 border-t bg-background border-border"
     >
       <div className="max-w-7xl mx-auto">
         {/* Quote, Tagline and Social Icons Section */}
@@ -47,14 +43,12 @@ const Footer = () => {
           {/* Quote and Tagline */}
           <div className="flex-1">
             <blockquote 
-              className="text-sm md:text-base italic font-light mb-4"
-              style={{ color: '#eaeaea' }}
+              className="text-sm md:text-base italic font-light mb-4 text-text-primary"
             >
               "The best way to understand a system is to try to change it." — Kurt Lewin
             </blockquote>
             <p 
-              className="text-sm md:text-base"
-              style={{ color: '#a0a0a0' }}
+              className="text-sm md:text-base text-text-secondary"
             >
               Always building, always learning.
             </p>
@@ -69,13 +63,12 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <hr className="my-4 border-t-2 border-gray-800" />
+        <hr className="my-4 border-t-2 border-border" />
 
         {/* Copyright */}
         <div className="text-center">
           <p 
-            className="text-sm"
-            style={{ color: '#a0a0a0' }}
+            className="text-sm text-text-secondary"
           >
             © 2025 Manish Lath. Crafted with systems thinking and historical curiosity.
           </p>

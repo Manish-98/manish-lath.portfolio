@@ -25,7 +25,7 @@ const Hero = () => {
           </Link>
 
           <Link 
-            href="/resume"
+            href="/"
             className="btn-secondary px-8 py-4 rounded-lg text-base font-medium"
           >
             Download Resume

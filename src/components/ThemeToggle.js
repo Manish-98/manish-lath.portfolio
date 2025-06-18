@@ -15,11 +15,7 @@ const ThemeToggle = () => {
     <div className="flex items-center">
       <button
         onClick={toggleTheme}
-        className="p-2 rounded-lg transition-colors hover:opacity-80"
-        style={{ 
-          backgroundColor: isDark ? '#18191c' : '#2e2e30',
-          color: '#eaeaea'
-        }}
+        className="p-2 rounded-lg transition-colors hover:opacity-80 bg-section text-text-primary"
         aria-label="Toggle theme"
       >
         {isDark ? (
