@@ -15,7 +15,7 @@ const navigationItems = [
 const NavLink = ({ href, icon, label }) => (
   <Link 
     href={href} 
-    className="text-sm font-medium transition-colors hover:opacity-80"
+    className="text-base font-bold transition-colors hover:opacity-80"
     style={{ color: '#eaeaea' }}
     title={label}
   >
