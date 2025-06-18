@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutMe() {
   return (
-    <section className="w-full max-w-4xl mx-auto p-8">
+    <section>
       <div className="bg-section rounded-2xl border border-border p-8">
         <div className="flex items-center gap-6">
           {/* Profile Image */}
