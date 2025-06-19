@@ -2,21 +2,21 @@ import { ArrowRight, Github } from "lucide-react";
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="bg-section rounded-2xl border border-border p-6 hover:border-accent-primary transition-colors duration-200 cursor-pointer group">
+    <div className="card">
       {/* Project Title */}
-      <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-accent-primary transition-colors duration-200">
+      <h3 className="text-xl font-semibold text-primary mb-2">
         {project.title}
       </h3>
 
       {/* Project Description */}
-      <p className="text-text-secondary leading-relaxed mb-2 text-justify">
+      <p className="text-secondary leading-relaxed mb-2 text-justify">
         {project.description}
       </p>
 
       <div className="flex justify-between items-center">
         {/* GitHub Link */}
-        <button className="inline-flex items-center gap-2 text-text-secondary hover:text-text-primary transition-colors duration-200 group">
-          <Github className="w-4 h-4" />
+        <button className="inline-flex items-center gap-2 text-secondary hover:text-primary transition-colors duration-200 group">
+          <Github className="w-4 h-4" color='var(--accent)' />
         </button>
 
         {/* Technology Tags */}
@@ -24,7 +24,7 @@ const ProjectCard = ({ project }) => {
           {project.technologies.map((tech, techIndex) => (
             <span
               key={techIndex}
-              className="px-3 py-1 bg-section text-accent-primary text-sm rounded-md border border-border"
+              className="px-3 py-1 bg-section text-accent text-sm rounded-md border border-accent"
             >
               {tech}
             </span>
@@ -55,8 +55,8 @@ export default function FeaturedProjects() {
     <section>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-3xl font-bold text-text-primary">Projects</h2>
-        <button className="inline-flex items-center gap-2 text-accent-primary hover:text-accent-hover transition-colors duration-200 group">
+        <h2 className="text-3xl font-bold text-primary">Projects</h2>
+        <button className="inline-flex items-center gap-2 text-accent hover:text-accent-hover transition-colors duration-200 group">
           <span className="text-base font-medium">View All</span>
           <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
         </button>

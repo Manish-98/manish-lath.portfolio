@@ -23,7 +23,7 @@ const socialLinks = [
 const SocialIcon = ({ href, ariaLabel, children }) => (
   <Link
     href={href}
-    className="p-2 md:p-3 rounded-lg bg-[#18191c] text-[#a0a0a0] transition-all duration-200 hover:bg-[#5e7ba5] hover:text-[#eaeaea] hover:scale-105"
+    className="p-2 md:p-3 rounded-lg bg-section text-secondary transition-all duration-200 hover:bg-accent hover:text-primary hover:scale-105"
     aria-label={ariaLabel}
     target="_blank"
     rel="noopener noreferrer"
@@ -43,12 +43,12 @@ const Footer = () => {
           {/* Quote and Tagline */}
           <div className="flex-1">
             <blockquote 
-              className="text-sm md:text-base italic font-light mb-4 text-text-primary"
+              className="text-sm md:text-base italic font-light mb-4 text-primary"
             >
               "The best way to understand a system is to try to change it." — Kurt Lewin
             </blockquote>
             <p 
-              className="text-sm md:text-base text-text-secondary"
+              className="text-sm md:text-base text-secondary"
             >
               Always building, always learning.
             </p>
@@ -68,7 +68,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center">
           <p 
-            className="text-sm text-text-secondary"
+            className="text-sm text-secondary"
           >
             © 2025 Manish Lath. Crafted with systems thinking and historical curiosity.
           </p>

@@ -4,21 +4,21 @@ import Image from "next/image";
 // Experience Card Component
 function ExperienceCard({ experience }) {
   return (
-    <div className="bg-section rounded-2xl border border-border p-8 hover:border-accent-primary transition-colors duration-200 cursor-pointer group">
+    <div className="card">
       <div className="flex flex-col items-start gap-6">
         {/* Experience Header - company symbol and { title, company, period } */}
 
         <div className="flex items-center gap-6">
           <Image src={experience.companyLogo} alt={experience.company} width={48} height={48} />
           <div className="flex flex-col">
-            <h3 className="text-xl font-semibold text-text-primary mb-1 group-hover:text-accent-primary transition-colors duration-200">
+            <h3 className="text-xl font-semibold text-primary mb-1">
               {experience.title}
             </h3>
             <div className="flex items-center gap-3">
-              <span className="text-text-secondary font-medium">
+              <span className="text-secondary font-medium">
                 {experience.company}
               </span>
-              <span className="text-text-secondary text-sm">
+              <span className="text-secondary text-sm">
                 {experience.period}
               </span>
             </div>
@@ -27,7 +27,7 @@ function ExperienceCard({ experience }) {
 
       <div className="flex-1">
         {/* Description */}
-        <p className="text-text-secondary leading-relaxed mb-6">
+        <p className="text-secondary leading-relaxed mb-6">
           {experience.description}
         </p>
 
@@ -36,7 +36,7 @@ function ExperienceCard({ experience }) {
           {experience.achievements.map((achievement, achievementIndex) => (
             <div
               key={achievementIndex}
-              className="flex items-center gap-2 text-accent-primary"
+              className="flex items-center gap-2 text-accent"
             >
               <achievement.icon className="w-4 h-4" />
               <span className="text-sm font-medium">
@@ -76,8 +76,8 @@ export default function ExperienceJourney() {
     <section>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-3xl font-bold text-text-primary">Journey</h2>
-        <button className="inline-flex items-center gap-2 text-accent-primary hover:text-accent-hover transition-colors duration-200 group">
+        <h2 className="text-3xl font-bold text-primary">Journey</h2>
+        <button className="inline-flex items-center gap-2 text-accent hover:text-accent-hover transition-colors duration-200 group">
           <span className="text-base font-medium">See Full</span>
           <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
         </button>
