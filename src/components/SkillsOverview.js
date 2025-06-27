@@ -1,28 +1,8 @@
 import React from 'react';
 import SkillsWithSearch from './SkillsWithSearch.js';
-import { SquareCode, Database, ShieldCheck, SquareStack } from 'lucide-react';
+import skillsData from '../data/skills';
 
 const SkillsOverview = () => {
-  // Static skills data - server-side
-  const skillsData = {
-    "Languages & Tools": {
-      icon: <SquareCode />,
-      skills: ["Java", "Kotlin", "JavaScript", "Git", "Docker"]
-    },
-    "Frameworks & Systems": {
-      icon: <SquareStack />,
-      skills: ["Spring Boot", "Kafka", "Redis", "Kubernetes"]
-    },
-    "Databases": {
-      icon: <Database />,
-      skills: ["PostgreSQL", "MongoDB", "Cassandra", "MySQL", "Elasticsearch"]
-    },
-    "Architecture & Practices": {
-      icon: <ShieldCheck />,
-      skills: ["REST APIs", "Event-driven Systems", "Microservices", "CI/CD", "TDD", "Orchestration"]
-    }
-  };
-
   return (
     <div className="max-w-6xl mx-auto p-8 bg-background">
       {/* Static Header - Server Rendered */}

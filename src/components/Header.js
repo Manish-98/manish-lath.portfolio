@@ -11,7 +11,7 @@ import { Home, Briefcase, Book } from 'lucide-react';
 const navigationItems = [
   { href: '/', label: 'Home', icon: <Home size={20} color='var(--accent)'/> },
   { href: '/experience', label: 'Experience', icon: <Briefcase size={20} color='var(--accent)' /> },
-  { href: '/work', label: 'Work', icon: <Book size={20} color='var(--accent)' /> }
+  { href: '/projects', label: 'Projects', icon: <Book size={20} color='var(--accent)' /> }
 ];
 
 // Navigation Link Component

@@ -58,7 +58,7 @@
 
 @layer components {
   .card {
-    @apply bg-section rounded-2xl border border-border p-6 hover:border-accent transition-colors duration-200 cursor-pointer shadow-md shadow-accent/80;
+    @apply bg-section rounded-2xl border border-border p-6 hover:border-accent transition-colors duration-200 shadow-md shadow-accent/80;
   }
 
   .btn-primary {
