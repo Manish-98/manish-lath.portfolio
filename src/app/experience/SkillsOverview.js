@@ -1,6 +1,6 @@
 import React from 'react';
 import SkillsWithSearch from './SkillsWithSearch.js';
-import skillsData from '../data/skills';
+import skillsData from '@/data/skills.js';
 
 const SkillsOverview = () => {
   return (

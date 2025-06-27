@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import ExperienceCard from './ExperienceCard';
-import { experiences } from '../data/ProfessionalJourneyData';
+import ExperienceCard from '../../components/ExperienceCard';
+import { experiences } from '../../data/ProfessionalJourneyData';
 import { BadgeDollarSign, HandPlatter, Receipt, ShieldPlus, UserPen } from 'lucide-react';
 
 const ProfessionalJourney = () => {
