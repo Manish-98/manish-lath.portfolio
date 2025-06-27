@@ -22,8 +22,8 @@ export default function AboutMe() {
           {/* Content */}
           <div className="flex-1">
             <p className="text-lg leading-relaxed mb-6 text-left sm:text-justify text-secondary">
-              I'm a systems-minded developer who finds beauty in efficient algorithms and elegant architectures. When not 
-              optimizing database queries, I'm probably reading about ancient civilizations or tinkering with distributed systems.
+              I&apos;m a systems-minded developer who finds beauty in efficient algorithms and elegant architectures. When not 
+              optimizing database queries, I&apos;m probably reading about ancient civilizations or tinkering with distributed systems.
             </p>
             
             {/* Read More Link */}

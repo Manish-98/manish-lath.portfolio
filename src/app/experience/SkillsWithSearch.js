@@ -65,7 +65,7 @@ const SkillsWithSearch = ({ skillsData }) => {
       {/* No Results Message */}
       {Object.keys(filteredCategories).length === 0 && searchTerm && (
         <div className="text-center py-12">
-          <p className="text-secondary text-lg">No skills found matching "{searchTerm}"</p>
+          <p className="text-secondary text-lg">No skills found matching &quot;{searchTerm}&quot;</p>
         </div>
       )}
     </>

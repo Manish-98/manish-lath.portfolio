@@ -45,7 +45,7 @@ const Footer = () => {
             <blockquote 
               className="text-sm md:text-base italic font-light mb-4 text-primary"
             >
-              "The best way to understand a system is to try to change it." — Kurt Lewin
+              &quot;The best way to understand a system is to try to change it.&quot; — Kurt Lewin
             </blockquote>
             <p 
               className="text-sm md:text-base text-secondary"
