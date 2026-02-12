@@ -1,54 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0e0e0f;
-  --section: #1a1a1c;
-  --primary: #eeeeee;
-  --secondary: #a0a0a0;
-  --accent: #2f5c4d;
-  --accent-hover: #3e7963;
-  --border: #2a2a2c;
+  --color-bg: #0e0e0f;
+  --color-surface: #1a1a1c;
+  --color-text: #eeeeee;
+  --color-text-muted: #a0a0a0;
+  --color-brand: #2f5c4d;
+  --color-brand-hover: #3e7963;
+  --color-border: #2a2a2c;
+  --color-on-brand: #ffffff;
 
-  background-color: var(--background);
-  color: var(--primary);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   font-family: var(--font-inter);
 }
 
-/* default theme */
 @theme {
-  --color-background: var(--background);
-  --color-section: var(--section);
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-border: var(--border);
+  --color-background: var(--color-bg);
+  --color-section: var(--color-surface);
+  --color-primary: var(--color-text);
+  --color-secondary: var(--color-text-muted);
+  --color-accent: var(--color-brand);
+  --color-accent-hover: var(--color-brand-hover);
+  --color-border: var(--color-border);
 }
-
-/* Add light theme */
-:root[data-theme="light"] {
-  --background: #faf9f6;
-  --section: #ffffff;
-  --primary: #1c1c1c;
-  --secondary: #666666;
-  --accent: #3c6e57;
-  --accent-hover: #4f8d72;
-  --border: #dddddd;
-
-
-  --color-background: var(--background);
-  --color-section: var(--section);
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-border: var(--border);
-
-  background-color: var(--background);
-  color: var(--primary);
-  font-family: var(--font-inter);
-}
-
 
 @layer base {
   section {
@@ -63,27 +38,26 @@
 
   .btn-primary {
     @apply transition-all duration-200;
-    background-color: var(--accent);
-    color: white;
-    border: 2px solid var(--accent);
+    background-color: var(--color-brand);
+    color: var(--color-on-brand);
+    border: 2px solid var(--color-brand);
   }
 
   .btn-primary:hover {
-    background-color: var(--accent-hover);
-    border-color: var(--accent-hover);
+    background-color: var(--color-brand-hover);
+    border-color: var(--color-brand-hover);
   }
 
   .btn-secondary {
     @apply transition-all duration-200;
     background-color: transparent;
-    color: var(--primary);
-    border: 2px solid var(--border);
+    color: var(--color-text);
+    border: 2px solid var(--color-border);
   }
 
-
   .btn-secondary:hover {
-    background-color: var(--section);
-    border-color: var(--accent-hover);
-    color: var(--accent-hover);
+    background-color: var(--color-surface);
+    border-color: var(--color-brand-hover);
+    color: var(--color-brand-hover);
   }
 }

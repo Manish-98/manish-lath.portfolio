@@ -18,7 +18,7 @@ const NavLink = ({ href, icon: Icon, label, isActive }) => (
     title={label}
   >
     <div className="block sm:hidden">
-      <Icon size={20} color="var(--accent)" />
+      <Icon size={20} color="var(--color-brand)" />
     </div>
     <div className="hidden sm:block">{label}</div>
   </Link>

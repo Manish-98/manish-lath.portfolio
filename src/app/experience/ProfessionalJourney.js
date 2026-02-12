@@ -27,7 +27,7 @@ const ProfessionalJourney = () => {
 
         {Object.entries(grouped).map(([company, roles]) => (
           <div key={company} className="relative mb-12 flex flex-col gap-4">
-            <div className="absolute left-4 w-24 h-8 bg-white border-2 border-accent rounded-xl items-center justify-center text-sm hidden sm:flex overflow-hidden">
+            <div className="absolute left-4 w-24 h-8 bg-section border-2 border-accent rounded-xl items-center justify-center text-sm hidden sm:flex overflow-hidden">
               <Image src={roles[0].companyLogo} alt={`${company} Logo`} width={32} height={32} className="w-[80%] h-full object-contain" />
             </div>
 
