@@ -17,6 +17,8 @@ import {
 } from 'lucide-react';
 import portfolio from './portfolio.json';
 
+export { portfolio };
+
 const iconMap = {
   BadgeDollarSign,
   HandPlatter,
