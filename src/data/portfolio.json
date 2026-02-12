@@ -9,7 +9,8 @@
   "navigation": [
     { "href": "/", "label": "Home", "icon": "Home" },
     { "href": "/experience", "label": "Experience", "icon": "Briefcase" },
-    { "href": "/projects", "label": "Projects", "icon": "Book" }
+    { "href": "/projects", "label": "Projects", "icon": "Book" },
+    { "href": "/blogs", "label": "Blogs", "icon": "NotebookPen" }
   ],
   "hero": {
     "heading": "I build things to understand them",
@@ -45,7 +46,8 @@
     },
     "latestWriting": {
       "title": "Latest Writing",
-      "cta": { "label": "Read All", "href": "#" }
+      "cta": { "label": "Read All", "href": "/blogs" },
+      "limit": 2
     },
     "experienceJourney": {
       "title": "Journey",
@@ -82,16 +84,28 @@
       "description": "Exploring how ancient cataloging systems inform modern database optimization. From Alexandria's scrolls to B-tree indexes...",
       "readTime": "5 min read",
       "date": "Dec 15, 2024",
-      "url": "#"
+      "url": "/blogs#database-indexing-strategies-lessons-from-ancient-libraries"
     },
     {
       "title": "Microservices Communication: Byzantine Fault Tolerance",
       "description": "How Byzantine generals' coordination problems mirror distributed system challenges. Practical consensus algorithms for reliable service communication...",
       "readTime": "8 min read",
       "date": "Nov 28, 2024",
-      "url": "#"
+      "url": "/blogs#microservices-communication-byzantine-fault-tolerance"
     }
   ],
+  "blogsPage": {
+    "title": "Thoughts, Systems, and Stories",
+    "description": "A collection of writing on backend engineering, distributed systems, and lessons borrowed from history.",
+    "sectionTitle": "All Writings",
+    "search": {
+      "fields": ["title", "description", "readTime", "date"],
+      "weights": { "title": 100, "description": 40, "readTime": 10, "date": 5 },
+      "placeholder": "Search blogs...",
+      "noResultsTitle": "No blogs found",
+      "noResultsSubtitle": "Try searching by topic, concept, or publication date"
+    }
+  },
   "projects": [
     {
       "title": "Personal Portfolio",
