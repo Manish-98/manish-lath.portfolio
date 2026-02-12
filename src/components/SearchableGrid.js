@@ -55,7 +55,7 @@ const SearchableGrid = ({
           {searchQuery && (
             <button
               onClick={() => handleSearchChange('')}
-              className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white"
+              className="absolute inset-y-0 right-0 pr-3 flex items-center text-secondary hover:text-primary"
             >
               <X className="h-5 w-5" />
             </button>
@@ -65,7 +65,7 @@ const SearchableGrid = ({
 
       {searchQuery && showResultsCount && (
         <div className="mb-6">
-          <p className="text-gray-400 text-sm">
+          <p className="text-secondary text-sm">
             {filteredData.length === 0
               ? `No results found for "${searchQuery}"`
               : `Found ${filteredData.length} result${filteredData.length !== 1 ? 's' : ''} matching "${searchQuery}"`}

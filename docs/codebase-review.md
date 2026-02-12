@@ -6,53 +6,57 @@
 - `src/components`: Reusable UI and feature components (`Header`, cards, search grid, hooks).
 - `src/components/Home`: Home page sections as composable modules.
 - `src/data`: Static content for projects, skills, and experience.
+- `src/theme`: Theme registry and runtime application helpers (new).
 
 The overall structure is good for a small portfolio and easy to navigate.
 
+## Theme coupling review
+
+Before this refactor, theme behavior was only partially decoupled:
+
+- Palette values lived in `globals.css`, so adding/replacing themes required editing global styles.
+- Theme switching logic in `useTheme` was hard-coded to exactly two theme names (`dark`/`light`).
+- A few UI components still used hardcoded color utilities (`bg-white`, `text-gray-400`, `hover:text-white`) instead of semantic theme tokens.
+
 ## Improvements applied in this change
 
-1. **Search logic extracted into `src/lib/search.js`**
-   - Centralized fuzzy search, nested-field access, scoring, and filtering.
-   - Keeps UI component (`SearchableGrid`) focused on rendering.
+1. **Theme registry extracted to `src/theme/themes.js`**
+   - Theme palettes are now data-driven and reusable.
+   - Adding a new theme is now "plug and play" via one centralized object.
 
-2. **`SearchableGrid` simplified**
-   - Removed search implementation details from the component.
-   - Added memoized config merge for predictable behavior.
+2. **Theme runtime utilities added in `src/theme/themeUtils.js`**
+   - Encapsulates theme validation, persistence lookup, and CSS variable application.
 
-3. **Search callback correctness fix**
-   - `onSearchChange` now receives filtered data computed with the latest input value, avoiding stale results.
+3. **`useTheme` simplified and decoupled**
+   - Uses shared utilities instead of hardcoded branch logic.
+   - Applies any registered theme without changing hook logic.
 
-4. **Fuzzy score consistency fix**
-   - Matches found via fuzzy mode now receive a score and are not accidentally discarded.
+4. **First-paint theming in `layout.js`**
+   - Bootstraps the saved/default theme before rendering UI to reduce flicker and keep behavior centralized.
+
+5. **Global semantic token alignment in `globals.css`**
+   - Uses semantic tokens (`--color-bg`, `--color-text`, etc.) and maps them to Tailwind utilities.
+
+6. **Hardcoded color usage removed from components**
+   - Updated `SearchableGrid` and `ProfessionalJourney` to use semantic theme classes.
 
 ## Recommended next cleanups
 
-1. **Standardize imports and aliases**
-   - Prefer `@/components/...` and `@/data/...` everywhere (some files still use relative imports).
+1. **Expose theme metadata for UI previews**
+   - Add labels/icons to theme definitions for a future multi-theme selector.
 
 2. **Unify repeated tag/chip styles**
    - `ProjectCard` and `SkillsWithSearch` use near-identical badge styles.
-   - Extract a simple `Tag` component for consistency and easier style updates.
+   - Extract a `Tag` primitive for consistency.
 
 3. **Normalize static data shape**
-   - Experience descriptions are newline-delimited strings; move to arrays of bullets in `src/data/ProfessionalJourneyData.js`.
-   - This avoids split logic in UI and makes content edits less error-prone.
+   - Experience descriptions are newline-delimited strings; move to bullet arrays.
 
-4. **Make search UX fully reusable**
-   - `SkillsWithSearch` duplicates search/filter behavior.
-   - Consider reusing `SearchableGrid` with a custom renderer and grouped data adapter.
+4. **Reuse search abstraction in skills page**
+   - `SkillsWithSearch` duplicates behavior covered by `SearchableGrid`.
 
 5. **Introduce lightweight type safety**
-   - Add JSDoc typedefs for `Project`, `Experience`, and search config.
-   - This improves editor hints without requiring TypeScript migration.
-
-6. **Consistency pass with formatter**
-   - Quote style and spacing vary across files.
-   - Add Prettier with a simple config and run in CI.
-
-7. **Accessibility and semantics**
-   - Header nav can mark active links with `aria-current="page"`.
-   - Search clear button can include a descriptive `aria-label`.
+   - Add JSDoc typedefs for `ThemeName`, `ThemePalette`, `Project`, and `Experience`.
 
 ## Suggested implementation order
 
