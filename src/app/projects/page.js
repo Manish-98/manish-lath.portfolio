@@ -1,21 +1,21 @@
 import ProjectsClient from './ProjectsClient';
-import projects from '../../data/projects';
+import { portfolioData } from '@/data/portfolio';
 
 const Projects = () => {
+  const { projectsPage, projects } = portfolioData;
+
   return (
     <section className="max-w-4xl mx-auto p-8 bg-background">
-      {/* Hero Section - Static content rendered on server */}
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-primary mb-2">
-          What I&apos;ve Been Building
+          {projectsPage.title}
         </h1>
         <p className="text-secondary text-lg">
-          Showcasing a mix of passion projects, practical tools, and experiments in clean code and curiosity.
+          {projectsPage.description}
         </p>
       </div>
 
-      {/* Client Component with projects data passed as props */}
-      <ProjectsClient projects={projects} />
+      <ProjectsClient projects={projects} searchConfig={projectsPage.search} sectionTitle={projectsPage.sectionTitle} />
     </section>
   );
 };
