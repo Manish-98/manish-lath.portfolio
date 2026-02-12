@@ -1,6 +1,7 @@
 import React from 'react';
 import SkillsWithSearch from './SkillsWithSearch.js';
 import { portfolioData } from '@/data/portfolio';
+import portfolio from '@/data/portfolio.json';
 
 const SkillsOverview = () => {
   return (
@@ -12,7 +13,7 @@ const SkillsOverview = () => {
       </div>
 
       <SkillsWithSearch
-        skillsData={portfolioData.skills}
+        skillsData={portfolio.skills}
         config={portfolioData.experiencePage.skillsOverview}
       />
     </div>

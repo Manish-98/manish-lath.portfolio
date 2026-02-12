@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
+import { getIcon } from '@/data/portfolio';
 
 const SkillsWithSearch = ({ skillsData, config }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -35,12 +36,12 @@ const SkillsWithSearch = ({ skillsData, config }) => {
 
       <div className="flex flex-row flex-wrap gap-8 mx-auto justify-center">
         {filteredCategories.map((category) => {
-          const Icon = category.icon;
+          const Icon = getIcon(category.icon);
 
           return (
             <div key={category.category} className="card w-full sm:w-lg">
               <div className="flex items-center mb-6">
-                <span className="text-lg mr-3 text-primary"><Icon /></span>
+                <span className="text-lg mr-3 text-primary">{Icon ? <Icon /> : null}</span>
                 <h2 className="text-xl font-bold text-primary">{category.category}</h2>
               </div>
 
