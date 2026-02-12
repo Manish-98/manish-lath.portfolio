@@ -29,6 +29,7 @@ function PostCard({ post }) {
 
 export default function LatestWriting() {
   const { home, posts } = portfolioData;
+  const visiblePosts = posts.slice(0, home.latestWriting.limit || posts.length);
 
   return (
     <section>
@@ -41,7 +42,7 @@ export default function LatestWriting() {
       </div>
 
       <div className="flex flex-col gap-6">
-        {posts.map((post, index) => (
+        {visiblePosts.map((post, index) => (
           <PostCard key={index} post={post} />
         ))}
       </div>
