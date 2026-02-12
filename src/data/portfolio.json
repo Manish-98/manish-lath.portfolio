@@ -97,7 +97,14 @@
   "blogsPage": {
     "title": "Thoughts, Systems, and Stories",
     "description": "A collection of writing on backend engineering, distributed systems, and lessons borrowed from history.",
-    "sectionTitle": "All Writings"
+    "sectionTitle": "All Writings",
+    "search": {
+      "fields": ["title", "description", "readTime", "date"],
+      "weights": { "title": 100, "description": 40, "readTime": 10, "date": 5 },
+      "placeholder": "Search blogs...",
+      "noResultsTitle": "No blogs found",
+      "noResultsSubtitle": "Try searching by topic, concept, or publication date"
+    }
   },
   "projects": [
     {
