@@ -1,16 +1,17 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { portfolioData } from '@/data/portfolio';
 
 const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+  variable: '--font-inter',
+  subsets: ['latin'],
 });
 
 export const metadata = {
-  title: "Manish Lath | Portfolio",
-  description: "Manish Lath's Portfolio",
+  title: portfolioData.site.title,
+  description: portfolioData.site.description,
 };
 
 export default function RootLayout({ children }) {

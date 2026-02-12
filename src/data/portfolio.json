@@ -1,0 +1,200 @@
+{
+  "site": {
+    "name": "Manish Lath",
+    "title": "Manish Lath | Portfolio",
+    "description": "Manish Lath's Portfolio",
+    "avatar": "/avatar-thumbnail.png",
+    "copyright": "© 2025 Manish Lath. Crafted with systems thinking and historical curiosity."
+  },
+  "navigation": [
+    { "href": "/", "label": "Home", "icon": "Home" },
+    { "href": "/experience", "label": "Experience", "icon": "Briefcase" },
+    { "href": "/projects", "label": "Projects", "icon": "Book" }
+  ],
+  "hero": {
+    "heading": "I build things to understand them",
+    "description": "Backend-first software developer obsessed with systems, performance optimization, and the fascinating patterns that connect code to history.",
+    "actions": [
+      { "label": "See My Projects", "href": "/work", "variant": "primary" },
+      { "label": "Download Resume", "href": "/", "variant": "secondary" }
+    ]
+  },
+  "about": {
+    "image": "/profile.jpg",
+    "imageAlt": "Profile",
+    "description": "I'm a systems-minded developer who finds beauty in efficient algorithms and elegant architectures. When not optimizing database queries, I'm probably reading about ancient civilizations or tinkering with distributed systems.",
+    "cta": {
+      "label": "Read More About Me",
+      "href": "/"
+    }
+  },
+  "footer": {
+    "quote": "\"The best way to understand a system is to try to change it.\" — Kurt Lewin",
+    "tagline": "Always building, always learning.",
+    "socialLinks": [
+      { "href": "https://github.com", "ariaLabel": "GitHub", "icon": "Github" },
+      { "href": "https://linkedin.com", "ariaLabel": "LinkedIn", "icon": "Linkedin" },
+      { "href": "mailto:your@email.com", "ariaLabel": "Email", "icon": "Mail" }
+    ]
+  },
+  "home": {
+    "featuredProjects": {
+      "title": "Projects",
+      "cta": { "label": "View All", "href": "/projects" },
+      "limit": 2
+    },
+    "latestWriting": {
+      "title": "Latest Writing",
+      "cta": { "label": "Read All", "href": "#" }
+    },
+    "experienceJourney": {
+      "title": "Journey",
+      "cta": { "label": "See Full", "href": "/experience" },
+      "limit": 1
+    }
+  },
+  "projectsPage": {
+    "title": "What I've Been Building",
+    "description": "Showcasing a mix of passion projects, practical tools, and experiments in clean code and curiosity.",
+    "search": {
+      "fields": ["title", "description", "technologies"],
+      "weights": { "title": 100, "technologies": 50, "description": 25 },
+      "placeholder": "Search projects...",
+      "noResultsTitle": "No projects found",
+      "noResultsSubtitle": "Try searching for technologies like \"Next.js\", \"JavaScript\", or project names"
+    },
+    "sectionTitle": "Recent Projects"
+  },
+  "experiencePage": {
+    "professionalJourney": {
+      "title": "Professional Journey",
+      "description": "A journey through code and context."
+    },
+    "skillsOverview": {
+      "title": "Skills Overview",
+      "searchPlaceholder": "Search skills...",
+      "emptyMessage": "No skills found matching"
+    }
+  },
+  "posts": [
+    {
+      "title": "Database Indexing Strategies: Lessons from Ancient Libraries",
+      "description": "Exploring how ancient cataloging systems inform modern database optimization. From Alexandria's scrolls to B-tree indexes...",
+      "readTime": "5 min read",
+      "date": "Dec 15, 2024",
+      "url": "#"
+    },
+    {
+      "title": "Microservices Communication: Byzantine Fault Tolerance",
+      "description": "How Byzantine generals' coordination problems mirror distributed system challenges. Practical consensus algorithms for reliable service communication...",
+      "readTime": "8 min read",
+      "date": "Nov 28, 2024",
+      "url": "#"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Personal Portfolio",
+      "description": "A thoughtfully designed developer portfolio showcasing projects, blogs, and skills with a minimal aesthetic and backend-first personality.",
+      "technologies": ["Next.js", "Tailwind CSS", "Generative AI", "Vercel"],
+      "github": "#",
+      "website": "#"
+    },
+    {
+      "title": "Medium TOC Extension",
+      "description": "A lightweight Chrome extension that enhances the Medium reading experience by providing a dynamic table of contents, focus mode, and quick access to all embedded links.",
+      "technologies": ["JavaScript", "Chrome APIs", "HTML/CSS"],
+      "github": "https://github.com/Manish-98/medium-toc",
+      "website": "https://chromewebstore.google.com/detail/medium-table-of-contents/ebcndedpphdfbbnifoinoaghlcmapdga"
+    },
+    {
+      "title": "Prarambh Plastech Website",
+      "description": "A fast, responsive company website built for Prarambh Plastech to showcase its products, services, and industrial expertise with a clean UI and optimized performance.",
+      "technologies": ["Next.js", "Tailwind CSS", "Generative AI", "Vercel"],
+      "github": "https://github.com/Manish-98/prarambh-plastech-web",
+      "website": "https://prarambh-plastech-web.vercel.app/"
+    },
+    {
+      "title": "Steganographer Web",
+      "description": "A web-based tool that allows users to hide and extract secret messages within images using steganography techniques, built with a focus on simplicity and privacy.",
+      "technologies": ["HTML", "CSS", "JavaScript", "HTML5 Canvas", "Github Pages"],
+      "github": "https://github.com/Manish-98/SteganographerWeb",
+      "website": "https://manish-98.github.io/SteganographerWeb/"
+    }
+  ],
+  "experiences": [
+    {
+      "company": "Technogise Pvt. Ltd.",
+      "title": "Technology Consultant",
+      "period": "January 2023 – Present",
+      "description": [
+        "Contribute to software architecture and ensure scalability and performance.",
+        "Write, test, and maintain high-quality code across the full SDLC.",
+        "Guide fellow developers and collaborate effectively with cross-functional teams.",
+        "Troubleshoot and resolve complex issues in existing systems.",
+        "Enhance workflows, code quality, and advocate for best practices."
+      ],
+      "achievements": [
+        { "icon": "BadgeDollarSign", "text": "UPI integration for a leading payment platform" },
+        { "icon": "HandPlatter", "text": "Setup AI service-line for the organisation" }
+      ],
+      "companyLogo": "/technogise-logo.png"
+    },
+    {
+      "company": "Thoughtworks India Pvt. Ltd.",
+      "title": "Senior Consultant - Application Developer",
+      "period": "August 2023 – December 2024",
+      "description": [
+        "Analyze business requirements and translate them into scalable, efficient, and maintainable software solutions.",
+        "Design application architecture and provide technical direction to the development team.",
+        "Ensure best practices in coding, security, and performance are followed during application development.",
+        "Mentor and guide other developers, providing technical expertise and code reviews.",
+        "Assist in troubleshooting complex technical issues and provide solutions."
+      ],
+      "achievements": [
+        { "icon": "ShieldPlus", "text": "Life Insurance Platform for a major insurance company" }
+      ],
+      "companyLogo": "/thoughtworks-logo.svg"
+    },
+    {
+      "company": "Thoughtworks India Pvt. Ltd.",
+      "title": "Consultant - Application Developer",
+      "period": "July 2020 - July 2023",
+      "description": [
+        "Develop applications for external clients to cater to their business needs.",
+        "Write clean, lean, testable, and maintainable code following the industry best practices.",
+        "Optimize solutions to cut the cost of business processes for the clients.",
+        "Consult the clients and other stakeholders about tech and business decisions.",
+        "Collaborate with multiple teams, consumer clients and other stakeholders to design highly functioning and reliable applications.",
+        "On an organization level, help the organization in the recruitment process by taking up tech interviews."
+      ],
+      "achievements": [
+        { "icon": "Receipt", "text": "Contract Management Platform for a B2B company" },
+        { "icon": "UserPen", "text": "Customer Management Portal for a B2B company" }
+      ],
+      "companyLogo": "/thoughtworks-logo.svg"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Languages & Tools",
+      "icon": "SquareCode",
+      "skills": ["Java", "Kotlin", "JavaScript", "Git", "Docker"]
+    },
+    {
+      "category": "Frameworks & Systems",
+      "icon": "SquareStack",
+      "skills": ["Spring Boot", "Kafka", "Redis", "Kubernetes"]
+    },
+    {
+      "category": "Databases",
+      "icon": "Database",
+      "skills": ["PostgreSQL", "MongoDB", "Cassandra", "MySQL", "Elasticsearch"]
+    },
+    {
+      "category": "Architecture & Practices",
+      "icon": "ShieldCheck",
+      "skills": ["REST APIs", "Event-driven Systems", "Microservices", "CI/CD", "TDD", "Orchestration"]
+    }
+  ]
+}

@@ -5,67 +5,53 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import ThemeToggle from './ThemeToggle';
-import { Home, Briefcase, Book } from 'lucide-react';
+import { getIcon, portfolioData } from '@/data/portfolio';
 
-// Navigation configuration
-const navigationItems = [
-  { href: '/', label: 'Home', icon: <Home size={20} color='var(--accent)'/> },
-  { href: '/experience', label: 'Experience', icon: <Briefcase size={20} color='var(--accent)' /> },
-  { href: '/projects', label: 'Projects', icon: <Book size={20} color='var(--accent)' /> }
-];
-
-// Navigation Link Component
-const NavLink = ({ href, icon, label, isActive }) => (
-  <Link 
-    href={href} 
+const NavLink = ({ href, icon: Icon, label, isActive }) => (
+  <Link
+    href={href}
     className={`text-base font-bold transition-colors ${
-      isActive 
-        ? 'text-accent' 
+      isActive
+        ? 'text-accent'
         : 'text-primary hover:text-accent'
     }`}
     title={label}
   >
     <div className="block sm:hidden">
-      {icon}
+      <Icon size={20} color="var(--accent)" />
     </div>
-    <div className="hidden sm:block">
-      {label}
-    </div>
+    <div className="hidden sm:block">{label}</div>
   </Link>
 );
 
 const Header = () => {
   const pathname = usePathname();
+  const { navigation, site } = portfolioData;
 
   return (
-    <header 
+    <header
       className="w-full px-6 py-4 border-b bg-background border-border shadow-sm shadow-accent/80 z-10"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Logo */}
         <div className="flex-shrink-0 flex items-center space-x-2 gap-1">
-          <Image src="/avatar-thumbnail.png" alt="Logo" width={32} height={32} className="object-contain" />
-          <h1 
-            className="text-lg font-bold tracking-wide hidden sm:block text-primary"
-          >
-            Manish Lath
+          <Image src={site.avatar} alt="Logo" width={32} height={32} className="object-contain" />
+          <h1 className="text-lg font-bold tracking-wide hidden sm:block text-primary">
+            {site.name}
           </h1>
         </div>
 
-        {/* Navigation */}
         <nav className="flex items-center space-x-8">
-          {navigationItems.map((item) => (
-            <NavLink 
-              key={item.href} 
-              href={item.href} 
-              icon={item.icon} 
+          {navigation.map((item) => (
+            <NavLink
+              key={item.href}
+              href={item.href}
+              icon={getIcon(item.icon)}
               label={item.label}
               isActive={pathname === item.href}
             />
           ))}
         </nav>
 
-        {/* Theme Toggle */}
         <ThemeToggle />
       </div>
     </header>
